@@ -24,7 +24,7 @@
             border: 5px solid brown;
         }
 		.preview-upload-photo{
-		     width:200px;
+		    
             transition: box-shadow 0.3s ease, border 0.3s ease;
         }
 
@@ -33,15 +33,36 @@
             border: 5px solid brown;
         }
 		
+				
 	.img-fluid {
     max-width: 215%;
     height: auto;
 }	
-
-	.myzoom {
-    max-width: 420px;
-    margin-bottom: 20px;
-}
+@media (max-width: 768px) {
+               .product-details .preview, .product-details .details {
+                  flex-direction: column;
+                  align-items: center;
+               }
+               .product-description .product-description-section, .product-description .product-uploads-section {
+                  flex-direction: column;
+                  align-items: center;
+               }
+               .product-description .product-dvdr {
+                  display: none;
+               }
+               .product-description .product-widget {
+                  margin-bottom: 20px;
+               }
+               .product-description .product-uploads-section img {
+                  width: 100%;
+               }
+			   				
+	.img-fluid {
+    max-width: 215%;
+    height: auto;
+}	
+            }
+        
 			
     </style>
    </head>
@@ -133,95 +154,96 @@
                </div>
             </div>
          </section>
-         <section class="product-details">
+          <section class="product-details"></section>
             <div class="container">
                <div class="row">
-                 <div class="preview col-md-7 d-flex " id="default">
-                     <div class="large-5 column">
-                        <div class="myzoom-container">
-                           <img class="myzoom" id="myzoom-default" src="images/maintheme2.jpg" xoriginal="images/prod2-large.png" />
-                          
-                        </div>
-                     </div>                 
-                  </div>
-                  <div class="details col-md-5 flex-end justify-content-end float-right">
-                     <h3 class="product-title">Desk Frame</h3>
-                     <h2 class="product-price"><span class="discount-price">999.00</span> <span class="regular-price">1100.00</span></h2>
-                     <div class="product-description">
-                        <h2>Product Brief</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                <div class="preview col-md-7 d-flex " id="default">
+                   <div class="large-5 column">
+                     <div class="myzoom-container">
+                        <img class="myzoom" id="myzoom-default" src="images/maintheme2.jpg" xoriginal="images/prod2-large.png" />
+                       
                      </div>
-                  </div>
+                   </div>                 
+                 </div>
+                 <div class="details col-md-5 flex-end justify-content-end float-right">
+                   <h3 class="product-title">Desk Frame</h3>
+                   <h2 class="product-price"><span class="discount-price">999.00</span> <span class="regular-price">1100.00</span></h2>
+                   <div class="product-description">
+                     <h2>Product Brief</h2>
+                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                   </div>
+                 </div>
                </div>
             </div>
-         </section>
-         <section class="product-description">
+          </section>
+          <section class="product-description">
             <div class="container">
                <div class="row">
-                  <div class="col-md-5 product-description-section">
+                 <div class="col-md-5 product-description-section">
+                   <div class="product-widget">
+                     <h2>Product Description</h2>
+                     <div class="prod-content">
+                        <ul>
+                          <li>
+                            <label>Overall Size:</label>
+                            <span>10<sup>"</sup> x 10<sup>"</sup></span>
+                          </li>
+                          <li>
+                            <label>Paper Detail:</label>
+                            <span>12 Sheet</span>
+                          </li>
+                          <li>
+                            <label></label>
+                            <span>10<sup>"</sup> Diameter</span>
+                          </li>
+                        </ul>
+                     </div>
+                   </div>
+                   <div class="product-widget">
+                     <h2>How To Customize</h2>
+                     <div class="prod-content">
+                        <ul>
+                          <li>
+                            <label>Step 01:</label>
+                            <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry</span>
+                          </li>
+                          <li>
+                            <label>Step 02:</label>
+                            <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry</span>
+                          </li>
+                          <li>
+                           <img src="images/desk3.jpg" class="w-50">
+                               <img src="images/desk2.jpg" />
+                                <img src="images/desk1.jpg" />
+                                <img src="images/desk5.jpg" />
+                                </li>
+                        </ul>
+                     </div>
+                   </div>
+                 </div>
+                 <div class="col-md-1 product-dvdr">
+                   <div class="vl"></div>
+                 </div>
+                 <div class="col-md-6 product-uploads-section desk-frame-upload">
+                   <div class="product-uploads">
                      <div class="product-widget">
-                        <h2>Product Description</h2>
-                        <div class="prod-content">
-                           <ul>
-                              <li>
-                                 <label>Overall Size:</label>
-                                 <span>10<sup>"</sup> x 10<sup>"</sup></span>
-                              </li>
-                              <li>
-                                 <label>Paper Detail:</label>
-                                 <span>12 Sheet</span>
-                              </li>
-                              <li>
-                                 <label></label>
-                                 <span>10<sup>"</sup> Diameter</span>
-                              </li>
-                           </ul>
-                        </div>
+                        <h2>You may Choose</h2>
+                          <div class="prod-uplaod"></div>
+                           <div class="preview-upload-photo width=200%">  
+                             <img src="images/desk4.webp" class="img-fluid">   
                      </div>
-                     <div class="product-widget">
-                        <h2>How To Customize</h2>
-                        <div class="prod-content">
-                           <ul>
-                              <li>
-                                 <label>Step 01:</label>
-                                 <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry</span>
-                              </li>
-                              <li>
-                                 <label>Step 02:</label>
-                                 <span>Lorem Ipsum is simply dummy text of the printing and typesetting industry</span>
-                              </li>
-							  <li>
-							   <img src="images/desk3.jpg" class="w-50">
-									 <img src="images/desk2.jpg" />
-									  <img src="images/desk1.jpg" />
-									  <img src="images/desk5.jpg" />
-									  </li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="col-md-1 product-dvdr">
-                     <div class="vl"></div>
-                  </div>
-                  <div class="col-md-6 product-uploads-section desk-frame-upload">
-                     <div class="product-uploads">
-                        <div class="product-widget">
-                           <h2>You may Choose</h2>
-                              <div class="prod-uplaod"></div>
-                                <div class="preview-upload-photo width=200%">  
-                                  <img src="images/desk4.webp" class="img-fluid">   
-                        </div>
-						 <div class="product-description">
-                        <h2>Product Brief</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
-                     </div>
-                     </div>
-                  </div>
+                      <div class="product-description">
+                     <h2>Product Brief</h2>
+                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. </p>
+                   </div>
+                   </div>
+                 </div>
                </div>
             </div>
-         </section>
+          </section>
+          
          <section class="footer-action">
             <div class="container">
                <div class="row">
@@ -266,7 +288,7 @@
                      <h3><span>Subscribe to our newsletter</span> </h3>
                      <div class="newsletter-content">
                         <div class="input-group">
-                           <input type="text" class="form-control" placeholder="Email...">
+                           <input type="text" class="form-control" placeholder="Enter Your Email...">
                            <button type="submit" class="btn btn-secondary">Subscribe</button>
                         </div>
                      </div>
