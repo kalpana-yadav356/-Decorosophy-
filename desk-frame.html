@@ -15,30 +15,28 @@
       <link href="css/designer.css" rel="stylesheet">
 	  
 	   <style>
+	  
         #myzoom-default {
             transition: box-shadow 0.3s ease, border 0.3s ease;
         }
 
         #myzoom-default:hover {
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            border: 5px solid brown;
+            border: 10px solid rgb(157, 153, 153);
         }
 		.preview-upload-photo{
-		    
+		     width:200px;
             transition: box-shadow 0.3s ease, border 0.3s ease;
         }
 
-       .preview-upload-photo {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-            border: 5px solid brown;
-        }
 		
-				
-	.img-fluid {
-    max-width: 215%;
-    height: auto;
+        .preview-upload-photo:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            border: 10px solid rgb(104, 99, 99);
+
 }	
-@media (max-width: 768px) {
+
+            @media (max-width: 768px) {
                .product-details .preview, .product-details .details {
                   flex-direction: column;
                   align-items: center;
@@ -56,13 +54,103 @@
                .product-description .product-uploads-section img {
                   width: 100%;
                }
-			   				
-	.img-fluid {
-    max-width: 215%;
-    height: auto;
-}	
             }
-        
+
+             /* General styles */
+        .myzoom-container {
+            position: relative;
+            overflow: hidden;
+            display: inline-block;
+            width: 100%; /* Make container responsive */
+            
+        }
+
+        .myzoom {
+            width: 100%; /* Make image fill its container */
+            height: auto;
+            transition: transform 0.25s ease-in;
+        }
+
+
+
+     
+
+        /* Media Query for Smaller Screens (Mobile Devices) */
+        @media (max-width: 767px) {
+            /* On mobile, make images full-width */
+            .prod-content img {
+                width: 100%;  /* Make images take up the full width */
+                margin-bottom: 10px; /* Add space between images */
+            }
+
+            /* For smaller screens, ensure the text takes the full width */
+            .prod-content li {
+                display: block; /* Stack images and text vertically */
+            }
+
+            .prod-content label {
+                font-size: 16px; /* Adjust font size for mobile */
+            }
+
+            .prod-content span {
+                font-size: 14px; /* Adjust font size for mobile */
+            }
+        }
+
+
+        /* Responsive styles */
+        /* For screens larger than 768px (laptop size) */
+        @media (min-width: 768px) {
+            .myzoom-container {
+                width: 70%; /* 70% width for laptops/tablets */
+                margin: 0 auto; /* Center the image */
+            }
+        }
+
+        /* For screens smaller than 768px (mobile size) */
+        @media (max-width: 767px) {
+            .myzoom-container {
+                width: 90%; /* 90% width for mobile */
+                margin: 0 auto; /* Center the image */
+            }
+
+          
+            
+        }
+
+
+           /* General styles for the preview container */
+           .preview-upload-photo {
+            width: 100%;  /* Default width of the container */
+            overflow: hidden; /* Ensure the image doesn't overflow outside the container */
+        }
+
+        /* Ensuring the image is responsive */
+        .img-fluid {
+            width: 100%;   /* Make the image fill the container */
+            height: auto;  /* Maintain aspect ratio */
+        }
+
+        /* Media Query for larger screens (laptops/tablets) */
+        @media (min-width: 768px) {
+            .preview-upload-photo {
+                width: 80%; /* Set the container to 80% of the screen width on larger devices */
+                margin: 0 auto; /* Center the image */
+            }
+        }
+
+        /* Media Query for small screens (mobile phones) */
+        @media (max-width: 767px) {
+            .preview-upload-photo {
+                width: 100%; /* Make the container full width on mobile */
+            }
+
+            .img-fluid {
+                width: 100%;  /* Keep the image responsive on smaller devices */
+            }
+        }
+
+    </style>
 			
     </style>
    </head>
